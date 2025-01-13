@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="basket2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="icon-container">
+                <a href="index.html">
+                    <img src="img/LOGO низ.png" alt="Іконка" class="header-icon">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#payment">Оплата і доставка</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="#cart">
+                    <i class="fas fa-shopping-cart"></i> <!-- Іконка кошика -->
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                
+            </div>
+        </nav>
+    </header>
+    
+<!-- Бургер іконка -->
+<div class="burger-menu-icon" id="burger-icon" onclick="toggleMenu()">
+    &#9776; <!-- Символ бургер-іконки -->
+</div>
+
+<!-- Меню для бургера -->
+<nav id="burger-menu" class="burger-menu">
+    <div class="close-menu-icon" id="close-icon" onclick="toggleMenu()" style="display: none;">
+        &times; <!-- Символ хрестика -->
+    </div>
+    <ul class="menu-list">
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#catalog-title2">Каталог </a></li>
+        <li><a href="#how-to-order">Як замовити</a></li>
+        <li><a href="#how-to-measure">Оплата і доставка</a></li>
+        <li><a href="#review">Залишити відгук</a></li>
+        
+    </ul>
+</nav>
+
+    <div class="catalog">
+        <h2 class="catalog-title2">Оформити замовлення</h2>
+        
+        <div class="cart-container">
+            <div class="cart-item-header" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; text-align: -webkit-center; font-weight: bold; padding: 10px 0; background-color: #4A3D99; color: white;">
+                <div>Фото</div>
+                <div>Артикул</div>
+                <div>Кількість</div>
+                <div>Ціна</div>
+                <div>Дія</div>
+            </div>
+            <div class="cart-item-body" style="margin-top: 10px;">
+                <!-- Товари будуть динамічно додаватись тут -->
+            </div>
+            <div class="cart-total" style="margin-bottom: 20px; text-align: right; font-weight: bold; font-size: 24px; font-family: 'Times New Roman', Times, serif;
+            color: #3A3C99;">
+                Загальна сума: <span id="cart-total">0.00</span> грн
+            </div>
+        </div>
+        
+        <div class="personal-data">
+            <h3>Внеси особисті дані</h3>
+            <form action="#" method="POST">
+                <label for="full-name">Прізвище : <span style="color: red;">*</span></label>
+                <input type="text" id="full-name" name="full-name" placeholder="Введіть ваше прізвище та ім'я" required>
+        
+                <label for="full-name">Ім'я: <span style="color: red;">*</span></label>
+                <input type="text" id="full-name" name="full-name" placeholder="Введіть ваше прізвище та ім'я" required>
+
+                <label for="phone-number">Мобільний номер: <span style="color: red;">*</span></label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Введіть ваш мобільний номер" required>            
+</form>
+        </div>
+
+   <!-- Блок способу доставки -->
+<div class="delivery-method-block">
+    <h3>Спосіб доставки</h3>
+
+    <label class="radio-option">
+        <input type="radio" name="delivery-method" value="nova-poshta" onclick="toggleDeliveryFields('nova-poshta')" required>
+        Нова Пошта
+    </label>
+
+    <label class="radio-option">
+        <input type="radio" name="delivery-method" value="ukrposhta" onclick="toggleDeliveryFields('ukrposhta')">
+        Укрпошта
+    </label>
+
+    <!-- Поля для доставки Новою Поштою -->
+<div id="nova-poshta-fields" class="delivery-fields" style="display: none;">
+    <label for="city">Місто:</label>
+    <input type="text" id="city" placeholder="Почніть вводити місто" autocomplete="off">
+    <ul id="city-suggestions"></ul>
+
+    <label for="branch-select">Відділення пошти: <span style="color: red;">*</span></label>
+    <select id="branch-select" name="post-office" required>
+        <option value="">Оберіть відділення</option>
+    </select>
+</div>
+
+    <!-- Поля для доставки Укрпоштою -->
+    <div id="ukrposhta-fields" class="delivery-fields" style="display: none;">
+        <label for="region-input">Область: <span style="color: red;">*</span></label>
+        <input type="text" id="region-input" name="region" placeholder="Введіть область"required>
+
+        <label for="city-input">Місто: <span style="color: red;">*</span></label>
+        <input type="text" id="city-input" name="city" placeholder="Введіть місто" required>
+
+        <label for="postal-code-input">Індекс: <span style="color: red;">*</span></label>
+        <input type="text" id="postal-code-input" name="postal-code" placeholder="індекс" required>
+    </div>
+</div>
+        
+        <div class="payment-method">
+            <h3>Спосіб оплати</h3>
+        
+             <!-- Вибір способу оплати через розрахунковий рахунок -->
+    <div class="payment-option">
+        <label for="payment-radio-account">
+            <input type="radio" id="payment-radio-account" name="payment-method" value="account">
+            Розрахунковий рахунок
+        </label>
+    </div>
+    <div id="account-details" style="display: none;">
+        <p>Будь ласка, сплатіть суму замовлення на розрахунковий рахунок, який вказано нижче.</p>
+        <p>В коментарях до сплати, вкажіть ПІБ за яким було оформлене замовлення.</p>
+        <p>Обов'язково надішліть чек про сплату нашому менеджеру у Viber або Telegram за номером:</p>
+        <p><strong>+380973333355</strong></p>
+        <p>Важливо: замовлення буде оброблене лише після надходження коштів на рахунок!</p>
+        <p>Отримувач: ФОП </p>
+        <p>Код отримувача: 3047306433</p>
+        <p>Рахунок отримувача у форматі відповідно до стандарту IBAN (UAH):</p>
+        <p><strong>UA24305333334344343434</strong></p>
+        <p>Назва банку отримувача: АТ КБ «ПриватБанк»</p>
+    </div>
+
+    <!-- Вибір способу оплати через LiqPay -->
+    <div class="payment-option">
+        <label for="payment-radio-liqpay">
+            <input type="radio" id="payment-radio-liqpay" name="payment-method" value="liqpay">
+            Оплата через Liqpay (Приват24 або банківська картка)
+        </label>
+    </div>
+
+    <!-- Вибір способу оплати при отриманні -->
+    <div class="payment-option">
+        <label for="payment-radio-cash">
+            <input type="radio" id="payment-radio-cash" name="payment-method" value="cash">
+            Оплата при отриманні
+        </label>
+    </div>
+</div>
+<div class="comment-block">
+    <h3>Коментар</h3>
+    <textarea id="comment" name="comment" placeholder="Введіть ваш коментар" rows="4" required></textarea>
+</div>
+<div class="buttons-section">
+    <form class="order-form" action="ok.php" method="POST">
+        <button type="submit">Замовити</button>
+    </form>
+    <a href="index.html" class="continue-button">Продовжити покупки</a>
+</div>
+
+<script>
+// Функція оновлення кількості товарів у кошику
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + parseInt(item.quantity), 0);
+    document.getElementById("cart-count").textContent = totalItems;
+}
+
+// Виклик функції при завантаженні сторінки
+updateCartCount();
+
+// Отримуємо дані з localStorage
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Контейнер для відображення товарів у кошику
+const cartContainer = document.querySelector(".cart-item-body");
+const cartTotalElement = document.getElementById("cart-total");
+
+// Функція для обчислення загальної суми
+function calculateTotal() {
+    const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    cartTotalElement.textContent = total.toFixed(2);
+}
+
+// Якщо кошик порожній
+if (cart.length === 0) {
+    cartContainer.innerHTML = "<p>Ваш кошик порожній</p>";
+} else {
+    cartContainer.innerHTML = ""; // Очищаємо контейнер
+
+    // Генеруємо список товарів
+    cart.forEach((item, index) => {
+        const basePrice = parseFloat(item.price) / parseInt(item.quantity || 1); // Базова ціна
+
+        const cartItem = document.createElement("div");
+        cartItem.className = "cart-item";
+        cartItem.style.display = "grid";
+        cartItem.style.gridTemplateColumns = "1fr 1fr 1fr 1fr 1fr";
+        cartItem.style.alignItems = "center";
+        cartItem.style.borderBottom = "1px solid #ccc";
+        cartItem.style.padding = "10px 0";
+
+        cartItem.innerHTML = `
+            <div class="cart-item-image">
+                <img src="${item.image}" alt="Товар" width="80" />
+            </div>
+            <div class="cart-item-article">
+                <input type="text" value="${item.article}" readonly style="width: 100%; border: none; text-align: center;" />
+            </div>
+            <div class="cart-item-quantity">
+                <input type="number" value="${item.quantity}" min="1" data-index="${index}" style="width: 60px; text-align: center;" />
+            </div>
+            <div class="cart-item-price">
+                <input type="text" value="${item.price}" readonly style="width: 100%; border: none; text-align: center;" />
+            </div>
+            <div class="cart-item-action">
+                <button class="remove-item" data-index="${index}" ">Видалити</button>
+            </div>
+        `;
+
+        cartContainer.appendChild(cartItem);
+    });
+
+    // Додаємо обробники подій для зміни кількості та видалення товарів
+    handleCartEvents();
+    calculateTotal(); // Оновлюємо загальну суму
+}
+
+// Обробка подій у кошику
+function handleCartEvents() {
+    // Оновлення ціни при зміні кількості
+    cartContainer.addEventListener("input", (e) => {
+        if (e.target.type === "number") {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            const newQuantity = parseInt(e.target.value);
+
+            if (newQuantity > 0) {
+                const basePrice = parseFloat(cart[index].price) / parseInt(cart[index].quantity || 1);
+                const updatedPrice = basePrice * newQuantity;
+
+                // Оновлюємо дані в масиві cart
+                cart[index].quantity = newQuantity;
+                cart[index].price = updatedPrice.toFixed(2);
+
+                // Оновлюємо вартість у DOM
+                e.target.closest(".cart-item").querySelector(".cart-item-price input").value = updatedPrice.toFixed(2);
+
+                // Зберігаємо оновлені дані в localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                calculateTotal(); // Оновлюємо загальну суму
+                updateCartCount(); // Оновлюємо кількість товарів
+            } else {
+                e.target.value = 1; // Мінімальне значення — 1
+            }
+        }
+    });
+
+    // Видалення товарів
+    cartContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove-item")) {
+            const index = e.target.getAttribute("data-index");
+
+            // Видаляємо товар з масиву
+            cart.splice(index, 1);
+
+            // Оновлюємо дані в localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Оновлюємо відображення
+            location.reload();
+        }
+    });
+}
+
+</script>
+
+
+        
+
+<script src="script.js"></script>
+<script src="api.js"></script>
+        
+</body>
+</html>
