@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       document.getElementById("intro").style.opacity = "0";
       document.getElementById("intro").style.visibility = "hidden";
-    }, 1000);
+    }, 4000);
 });
   
 
