@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТМ SOYUZ KONDITER - Кондитерські вироби від ТОВ «ВИРОБНИК ПЛЮС»</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="basket2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <img src="img/LOGO низ.png" alt="Soyuz Konditer Logo" class="intro-logo">
+        <div class="lines">
+        </div>
+      </div>
+        <header class="header">
+        <nav class="nav">
+            <div class="icon-container">
+                <img src="img/LOGO низ.png" alt="Іконка" class="header-icon">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="open-about-modal">Про нас</a></li>
+                <li><a href="#" class="open-payment-modal">Оплата і доставка</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="/basket2.html">
+                    <i class="fas fa-shopping-cart"></i> <!-- Іконка кошика -->
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+       </nav>
+    </header>
+   <!-- Бургер іконка -->
+<div class="burger-menu-icon" id="burger-icon" onclick="toggleMenu()">
+    &#9776; <!-- Символ бургер-іконки -->
+</div>
+
+<!-- Меню для бургера -->
+<nav id="burger-menu" class="burger-menu">
+    <div class="close-menu-icon" id="close-icon" onclick="toggleMenu()" style="display: none;">
+        &times; <!-- Символ хрестика -->
+    </div>
+    <ul class="menu-list">
+        <li class="menu-item-with-submenu">
+            <a href="#catalog" class="catalog-link">
+                <span class="menu-icon catalog-icon">
+                    <span class="square"></span>
+                    <span class="square"></span>
+                    <span class="square"></span>
+                    <span class="square"></span>
+                </span>
+                Каталог
+                <span class="submenu-arrow">▼</span> <!-- Стрілочка -->
+            </a>
+            <ul class="submenu">
+                <li><a href="#catalog">Вівсяне печиво</a></li>
+                <li><a href="#catalog-corn">Кукурудзяне печиво</a></li>
+                <li><a href="#diatery">Дієтичне печиво</a></li>
+                <li><a href="#crackers">Сухарі</a></li>
+                <li><a href="#confectionery">Кондитерські вироби</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="open-about-modal">Про нас</a></li>
+        <li><a href="#" class="open-payment-modal">Оплата і доставка</a></li>
+        <li><a href="#review">Контакти</a></li>
+    </ul>
+</nav>
+
+  
+<!-- Карусель банерів -->
+<section class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('img/БанерP1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('img/Гол1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('img/Гол2.jpg');"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="carousel-btn" onclick="changeSlide(0)"></span>
+            <span class="carousel-btn" onclick="changeSlide(1)"></span>
+            <span class="carousel-btn" onclick="changeSlide(2)"></span>
+        </div>
+    </div>
+</section>
+<header class="page-header">
+    <div class="filter-container">
+        <h1>Каталог товарів</h1>
+        <div class="filter-dropdown">
+            <div class="custom-select">
+                <div class="select-selected">Обрати категорію</div>
+                <div class="select-items select-hide">
+                    <div data-value="catalog">Вівсяне печиво</div>
+                    <div data-value="catalog-corn">Кукурудзяне печиво</div>
+                    <div data-value="diatery">Дієтичне печиво</div>
+                    <div data-value="crackers">Сухарі</div>
+                    <div data-value="confectionery">Кондитерські вироби</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="catalog-tittle" id="catalog">
+    <h2 id="catalog" class="catalog-title">Вівсяне печиво</h2>
+</div>
+<section class="product-catalog" id="catalog">
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs11.jpg" alt="Печиво вівсяне класичне">
+        <p>Артикул: 155</p>
+        <p>Печиво вівсяне класичне</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-155" style="display: none;">
+            <img src="img/Vivs11.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs14.jpg" alt="Друге зображення">
+            <img src="img/Vivs11.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs14.jpg" alt="Друге зображення">
+            <p>Вівсяне печиво класичне – смак традицій у кожному шматочку! Приготоване з добірного борошна та натуральних інгредієнтів, ідеально для сніданку чи чаювання. Вага 400 г, упакування флоу-пак.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">410 кк</p>
+                </div>
+            
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,9 г</strong> <span id="modal-proteins" style="font-size: 16px; font-weight: bold;"></span></p>
+                    <p><strong>Жири: 5,9 г</strong> <span id="modal-fats" style="font-size: 16px; font-weight: bold;"></span></p>
+                    <p><strong>Вуглеводи: 5,9 г</strong> <span id="modal-carbs" style="font-size: 16px; font-weight: bold;"></span></p>
+                </div>
+            
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+        </div> 
+       
+   
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs5.jpg" alt="Печиво вівсяне  &quot;елітне&quot;">
+        <p>Артикул: 141</p>
+        <p>Печиво вівсяне з "елітне"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-141" style="display: none;">
+            <img src="img/Vivs5.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs17.jpg" alt="Друге зображення">
+            <p>Вівсяне печиво "елітне" – класика з солодкими нотками! Ідеальне для чаювання чи перекусу. Вага 400 г, упакування флоу-пак.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">410 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,9 г</strong></p>
+                    <p><strong>Жири: 16,5 г</strong></p>
+                    <p><strong>Вуглеводи: 69 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs18.jpg" alt="Печиво вівсяне з &quot;кунжутом&quot;">
+        <p>Артикул: 165</p>
+        <p>Печиво вівсяне з "кунжутом"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-165" style="display: none;">
+            <img src="img/Vivs18.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs17.jpg" alt="Друге зображення">
+            <p>Ніжне, хрустке та неймовірно смачне печиво з додаванням кунжуту. Ідеально підходить для перекусу чи чаювання. Вага: 400 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">448,5 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 6,8 г</strong></p>
+                    <p><strong>Жири: 16,2 г</strong></p>
+                    <p><strong>Вуглеводи: 69 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs10.jpg" alt="Печиво вівсяне &quot;Злаки&quot;">
+        <p>Артикул: 147</p>
+        <p>Печиво вівсяне "Злаки"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-147" style="display: none;">
+            <img src="img/Vivs10.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs9.jpg" alt="Друге зображення">
+            <p>Смакота з смаженими ядрами арахісу та зернятками льону. Ідеальний вибір для сніданку чи перекусу. Вага: 400 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">445,3 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 7,4 г</strong></p>
+                    <p><strong>Жири: 16,5 г</strong></p>
+                    <p><strong>Вуглеводи: 67,4 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs11.jpg" alt="Печиво вівсяне класичне">
+        <p>Артикул: 25</p>
+        <p>Печиво вівсяне класичне</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-25" style="display: none;">
+            <img src="img/Vivs11.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs14.jpg" alt="Друге зображення">
+            <p>Вівсяне печиво класичне. Традиційне печиво преміум класу, виготовлене з добірних інгредієнтів. Ідеальний вибір для поціновувачів класичного смаку. Вага: 2,7 кг. Упакування: ящик.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">450 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p>Білки: 6 г</p>
+                    <p>Жири: 15 г</p>
+                    <p>Вуглеводи: 71,5 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs5.jpg" alt="Печиво вівсяне Елітне">
+        <p>Артикул: 109</p>
+        <p>Печиво вівсяне "Елітне"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <div class="hidden-details" id="details-109" style="display: none;">
+            <img src="img/Vivs5.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs6.jpg" alt="Друге зображення">
+            <p>Вівсяне печиво Елітне. Смакує ще краще завдяки додаванню шоколадної крихти. Ідеальне для справжніх поціновувачів солодощів. Вага: 2,8 кг. Упакування: ящик.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">410 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p>Білки: 5,9 г</p>
+                    <p>Жири: 16,5 г</p>
+                    <p>Вуглеводи: 69 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs18.jpg" alt="Печиво вівсяне з кунжутом">
+        <p>Артикул: 111</p>
+        <p>Печиво вівсяне з "Кунжутом"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <div class="hidden-details" id="details-111" style="display: none;">
+            <img src="img/Vivs18.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs17.jpg" alt="Друге зображення">
+            <p>Ніжне, хрустке та неймовірно смачне печиво з додаванням кунжуту. Ідеально підходить для будь-якого чаювання чи перекусу. Вага: 2,8 кг. Упакування: ящик.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">448,5 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p>Білки: 6,8 г</p>
+                    <p>Жири: 16,2 г</p>
+                    <p>Вуглеводи: 69 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs10.jpg" alt="Печиво вівсяне Злаки">
+        <p>Артикул: 110</p>
+        <p>Печиво вівсяне "Злаки"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <div class="hidden-details" id="details-110" style="display: none;">
+            <img src="img/Vivs10.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs9.jpg" alt="Друге зображення">
+            <p>Смачне печиво з смаженими ядрами арахісу та зернятками льону. Ідеальний вибір для любителів корисних перекусів. Вага: 2,8 кг. Упакування: ящик.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">445,3 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p>Білки: 7,4 г</p>
+                    <p>Жири: 16,5 г</p>
+                    <p>Вуглеводи: 67,4 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                    <p id="modal-expiry"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs5.jpg" alt="Печиво вівсяне \"Елітне\"">
+        <p>Артикул: 2780</p>
+        <p>Печиво вівсяне "Елітне"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-2780" style="display: none;">
+            <img src="img/Vivs5.jpg" alt="Печиво вівсяне \"Елітне\" - основне зображення">
+            <p>Вівсяне печиво "Елітне". Смакує ще краще завдяки додаванню шоколадної крихти. Ідеальне для справжніх поціновувачів солодощів. Вага: 1,35 г. Упакування: ящик.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">410 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,9 г</strong></p>
+                    <p><strong>Жири: 16,5 г</strong></p>
+                    <p><strong>Вуглеводи: 69 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+            <div id="modal-price-block" class="price-section">
+                <p>Ціна: <span class="price">50</span> грн</p>
+                <div class="quantity-section">
+                    <div class="quantity-input">
+                        <button type="button" class="quantity-button minus">-</button>
+                        <input type="number" id="quantity-2780" min="1" value="1">
+                        <button type="button" class="quantity-button plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs21.jpg" alt="Печиво вівсяне \"SUPER SLYVA\>
+        <p>Артикул: 2778</p>
+        <p>Печиво вівсяне "SUPER SLYVA"</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <div class="hidden-details" id="details-2778" style="display: none;">
+            <img src="img/Vivs21.jpg" alt="Печиво вівсяне \"SUPER SLYVA\ - основне зображення>
+            <p>Печиво вівсяне SUPER SLYVA - Один з найкращих поєднань вівсяне печиво та чорнослив. Це не тільки дуже смачно але й корисно! Вага 200 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">419,7 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,8 г</strong></p>
+                    <p><strong>Жири: 12,9 г</strong></p>
+                    <p><strong>Вуглеводи: 70,1 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+            <div id="modal-price-block" class="price-section">
+                <p>Ціна: <span class="price">50</span> грн</p>
+                <div class="quantity-section">
+                    <div class="quantity-input">
+                        <button type="button" class="quantity-button minus">-</button>
+                        <input type="number" id="quantity-2778" min="1" value="1">
+                        <button type="button" class="quantity-button plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs19.jpg" alt="Печиво вівсяне BEST APRICOT">
+        <p>Артикул: 2777</p>
+        <p>Печиво вівсяне BEST APRICOT</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-2777" style="display: none;">
+            <img src="img/Vivs19.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs19.jpg" alt="Друге зображення">
+            <p>Печиво вівсяне BEST APRICOT - захоплення насиченим смаком та цікавим поєднанням текстур. Неповторний смак вівсяного печива та кураги. Вага 200 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">418,9 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,9 г</strong></p>
+                    <p><strong>Жири: 12,9 г</strong></p>
+                    <p><strong>Вуглеводи: 69,8 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+            <div id="modal-price-block" class="price-section">
+                <p>Ціна: <span class="price">50</span> грн</p>
+                <div class="quantity-section">
+                    <div class="quantity-input">
+                        <button type="button" class="quantity-button minus">-</button>
+                        <input type="number" id="quantity" min="1" value="1">
+                        <button type="button" class="quantity-button plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="oatmeal-cookies">
+        <img src="img/Vivs2.jpg" alt="Печиво вівсяне VERY CHERRY">
+        <p>Артикул: 2779</p>
+        <p>Печиво вівсяне VERY CHERRY</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-2779" style="display: none;">
+            <img src="img/Vivs2.jpg" alt="Печиво вівсяне - основне зображення">
+            <img src="img/Vivs2.jpg" alt="Друге зображення">
+            <p>Печиво вівсяне VERY CHERRY - цікаве поєднання смаків вівсяного печива з вишнею, ніжне та ароматне хрустке печиво. Вага 200 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">424,5 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки: 5,8 г</strong></p>
+                    <p><strong>Жири: 12,9 г</strong></p>
+                    <p><strong>Вуглеводи: 71,3 г</strong></p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+            <div id="modal-price-block" class="price-section">
+                <p>Ціна: <span class="price">50</span> грн</p>
+                <div class="quantity-section">
+                    <div class="quantity-input">
+                        <button type="button" class="quantity-button minus">-</button>
+                        <input type="number" id="quantity" min="1" value="1">
+                        <button type="button" class="quantity-button plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<div class="catalog-tittle">
+    <h2 id="catalog-corn" class="catalog-title">Кукурудзяне печиво</h2>
+</div>
+<section class="product-catalog" id="catalog-corn">
+    <div class="product-card" data-category="corn-cookies">
+        <img src="img/kuk3.jpg" alt="Печиво здобне кукурудзяне">
+        <p>Артикул: 235</p>
+        <p>Печиво здобне кукурудзяне</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-235" style="display: none;">
+            <img src="img/kuk3.jpg" alt="Печиво кукурудзяне - основне зображення">
+            <img src="img/kuk1.jpg" alt="Друге зображення">
+            <p>Печиво здобне кукурудзяне. Легке та сонячне печиво з додаванням кукурудзяного борошна, що не містить глютену. Збагачене вітамінами! Вага 2,8 кг.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">471,6 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки:</strong> 5,8 г</p>
+                    <p><strong>Жири:</strong> 19,2 г</p>
+                    <p><strong>Вуглеводи:</strong> 69,1 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="corn-cookies">
+        <img src="img/kuk6.jpg" alt="Печиво здобне кукурудзяне фасоване">
+        <p>Артикул: 238</p>
+        <p>Печиво здобне кукурудзяне фасоване</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-238" style="display: none;">
+            <img src="img/kuk6.jpg" alt="Печиво кукурудзяне фасоване - основне зображення">
+            <img src="img/kuk1 2.jpg" alt="Друге зображення">
+            <p>Фасоване кукурудзяне печиво. Ідеальний десерт для задоволення та збагачення організму вітамінами! Вага 400 г.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">471,6 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки:</strong> 5,8 г</p>
+                    <p><strong>Жири:</strong> 19,2 г</p>
+                    <p><strong>Вуглеводи:</strong> 69,1 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="premium-corn-cookies">
+        <img src="img/kukp1.jpg" alt="Печиво кукурудзяне Преміум">
+        <p>Артикул: 230</p>
+        <p>Печиво кукурудзяне Преміум</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-230" style="display: none;">
+            <img src="img/kukp1.jpg" alt="Печиво кукурудзяне Преміум - основне зображення">
+            <img src="img/kuk5.jpg" alt="Друге зображення">
+            <p>Кукурудзяне печиво Преміум з шоколадними крихтами. Ідеальний вибір для вишуканих чаювань! Вага 2,8 кг.</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">481,2 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки:</strong> 5,9 г</p>
+                    <p><strong>Жири:</strong> 21,6 г</p>
+                    <p><strong>Вуглеводи:</strong> 66,3 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </section>
+    <div class="catalog-tittle">
+        <h2 id="dietary" class="catalog-title">Дієтичне печиво</h2>
+    </div>
+    <section class="product-catalog" id="diatery">
+        <div class="product-card" data-category="oat-cookies">
+            <img src="img/Diet2.jpg" alt="Печиво вівсяне на фруктозі">
+            <p>Артикул: 171</p>
+            <p>Печиво вівсяне на фруктозі</p>
+            <p>Ціна: <span class="price">50</span> грн, шт</p>
+            <button class="details-btn">Детальніше</button>
+            <!-- Приховані дані для сторінки деталей -->
+            <div class="hidden-details" id="details-171" style="display: none;">
+                <img src="img/Diet2.jpg" alt="Печиво вівсяне - основне зображення">
+                <img src="img/Die2.jpg" alt="Друге зображення">
+                <p>Печиво вівсяне на фруктозі. Вівсяне печиво з фруктозою - чудовий вибір для тих, хто цінує смак та корисність. Ніжні нотки роблять його ідеальним сніданком або перекусом. Вага 300 г.</p>
+                <div class="nutrition-details">
+                    <div class="calories">
+                        <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                        <p class="calories-text">481,2 кк</p>
+                    </div>
+                    <div class="nutrition2">
+                        <p class="calories-label">Кількість калорій:</p>
+                        <p><strong>Білки:</strong> 5,9 г</p>
+                        <p><strong>Жири:</strong> 21,6 г</p>
+                        <p><strong>Вуглеводи:</strong> 66,3 г</p>
+                    </div>
+                    <div class="data">
+                        <p class="data-label">Термін:</p>
+                        <p class="data-expiry">180 днів</p>
+                        <img src="img/time.png" alt="Час" class="data-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="corn-cookies">
+            <img src="img/Diet4.jpg" alt="Печиво здобне кукурудзяне з фруктозою">
+            <p>Артикул: 270</p>
+            <p>Печиво здобне кукурудзяне з фруктозою</p>
+            <p>Ціна: <span class="price">50</span> грн, шт</p>
+            <button class="details-btn">Детальніше</button>
+            <!-- Приховані дані для сторінки деталей -->
+            <div class="hidden-details" id="details-270" style="display: none;">
+                <img src="img/Diet4.jpg" alt="Печиво кукурудзяне з фруктозою - основне зображення">
+                <img src="img/Diet3.jpg" alt="Друге зображення">
+                <p>Печиво здобне кукурудзяне з фруктозою. Кукурудзяне печиво з фруктозою - смачний та здоровий вибір для перекусу, який надасть енергії на весь день. Вага 300 г.</p>
+                <div class="nutrition-details">
+                    <div class="calories">
+                        <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                        <p class="calories-text">481,2 кк</p>
+                    </div>
+                    <div class="nutrition2">
+                        <p class="calories-label">Кількість калорій:</p>
+                        <p><strong>Білки:</strong> 5,9 г</p>
+                        <p><strong>Жири:</strong> 21,6 г</p>
+                        <p><strong>Вуглеводи:</strong> 66,3 г</p>
+                    </div>
+                    <div class="data">
+                        <p class="data-label">Термін:</p>
+                        <p class="data-expiry">180 днів</p>
+                        <img src="img/time.png" alt="Час" class="data-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+        <div class="catalog-tittle">
+            <h2 id="rusk" class="catalog-title">Сухарі</h2>
+        </div>
+<section class="product-catalog" id="crackers">
+    <div class="product-card" data-category="premium-wheat-dry">
+        <img src="img/Suhar5.jpg" alt="Сухарі пшеничні здобні Столичні з родзинками">
+        <p>Артикул: 171</p>
+        <p>Сухарі пшеничні здобні Столичні з родзинками</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-171" style="display: none;">
+            <img src="img/Suhar5.jpg" alt="Сухарі пшеничні здобні Столичні з родзинками - основне зображення">
+            <img src="img/Suhar6.jpg" alt="Друге зображення">
+            <p>Сухарі з родзинками у фасованому форматі - це найкраща класика з елітними родзинками, яка розкриває нові смакові відчуття кожним шматочком. Вага 300г. Упакування флоу-пак</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">417 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки:</strong> 9 г</p>
+                    <p><strong>Жири:</strong> 5 г</p>
+                    <p><strong>Вуглеводи:</strong> 78,1 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="product-card" data-category="premium-wheat-dry">
+        <img src="img/Suhar4.jpg" alt="Сухарі пшеничні здобні Столичні">
+        <p>Артикул: 619</p>
+        <p>Сухарі пшеничні здобні Столичні</p>
+        <p>Ціна: <span class="price">50</span> грн, шт</p>
+        <button class="details-btn">Детальніше</button>
+        <!-- Приховані дані для сторінки деталей -->
+        <div class="hidden-details" id="details-619" style="display: none;">
+            <img src="img/Suhar4.jpg" alt="Сухарі пшеничні здобні Столичні - основне зображення">
+            <img src="img/Suhar5.jpg" alt="Друге зображення">
+            <p>Сухарі з родзинками - найкраща класика, де кожна родзинка - вибіркова перлина, яка додає смаку та задоволення. Вага 1,9 кг. Упакування ящик екран</p>
+            <div class="nutrition-details">
+                <div class="calories">
+                    <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                    <p class="calories-text">417 кк</p>
+                </div>
+                <div class="nutrition2">
+                    <p class="calories-label">Кількість калорій:</p>
+                    <p><strong>Білки:</strong> 9 г</p>
+                    <p><strong>Жири:</strong> 5 г</p>
+                    <p><strong>Вуглеводи:</strong> 78,1 г</p>
+                </div>
+                <div class="data">
+                    <p class="data-label">Термін:</p>
+                    <p class="data-expiry">180 днів</p>
+                    <img src="img/time.png" alt="Час" class="data-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            </section>
+            <div class="catalog-tittle">
+                <h2 id="confectionery" class="catalog-title">Кондитерські вироби</h2>
+            </div>
+            <section class="product-catalog" id="confectionery">
+                <div class="product-card" data-category="corn-snacks">
+                    <img src="img/Chrus2.jpg" alt="Кукурудзяна паличка KHRUSTYASHKA з нутеллою">
+                    <p>Артикул: 1022</p>
+                    <p>Кукурудзяна паличка "KHRUSTYASHKA" з наповнювачем нутелла</p>
+                    <p>Ціна: <span class="price">50</span> грн, шт</p>
+                    <button class="details-btn">Детальніше</button>
+                    <!-- Приховані дані для сторінки деталей -->
+                    <div class="hidden-details" id="details-1022" style="display: none;">
+                        <img src="img/Chrus2.jpg" alt="Основне зображення - KHRUSTYASHKA з нутеллою">
+                        <img src="img/Chrus1.jpg" alt="Друге зображення">
+                        <p>Кукурудзяна паличка KHRUSTYASHKA з наповнювачем нутелла. Смачні кукурудзяні палички з нутеллою - незабутній смак з дитинства, який залишається у вас й дорослому віці. Смак, перед яким важко зупинитися. Вага 2,2 кг. Упакування ящик екран.</p>
+                        <div class="nutrition-details">
+                            <div class="calories">
+                                <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                                <p class="calories-text">490 кк</p>
+                            </div>
+                            <div class="nutrition2">
+                                <p class="calories-label">Кількість калорій:</p>
+                                <p><strong>Білки:</strong> 4,5 г</p>
+                                <p><strong>Жири:</strong> 25,4 г</p>
+                                <p><strong>Вуглеводи:</strong> 61,2 г</p>
+                            </div>
+                            <div class="data">
+                                <p class="data-label">Термін:</p>
+                                <p class="data-expiry">180 днів</p>
+                                <img src="img/time.png" alt="Час" class="data-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="corn-snacks">
+                    <img src="img/Chrus4.jpg" alt="Кукурудзяна паличка KHRUSTYASHKA з рафаелло">
+                    <p>Артикул: 1042</p>
+                    <p>Кукурудзяна паличка "KHRUSTYASHKA" з наповнювачем рафаелло</p>
+                    <p>Ціна: <span class="price">50</span> грн, шт</p>
+                    <button class="details-btn">Детальніше</button>
+                    <!-- Приховані дані для сторінки деталей -->
+                    <div class="hidden-details" id="details-1042" style="display: none;">
+                        <img src="img/Chrus4.jpg" alt="Основне зображення - KHRUSTYASHKA з рафаелло">
+                        <img src="img/Chrus3.jpg" alt="Друге зображення">
+                        <p>Кукурудзяна паличка KHRUSTYASHKA з наповнювачем рафаелло. Смачні кукурудзяні палички з ексклюзивним смаком рафаелло - неперевершене поєднання хрусткості та ніжності, щоважко відірватися від них. Вага 2,2 кг. Упакування ящик екран.</p>
+                        <div class="nutrition-details">
+                            <div class="calories">
+                                <img src="img/Зірка позначка2.png" alt="Зірочка" class="star-icon">
+                                <p class="calories-text">490 кк</p>
+                            </div>
+                            <div class="nutrition2">
+                                <p class="calories-label">Кількість калорій:</p>
+                                <p><strong>Білки:</strong> 4,5 г</p>
+                                <p><strong>Жири:</strong> 25,4 г</p>
+                                <p><strong>Вуглеводи:</strong> 61,2 г</p>
+                            </div>
+                            <div class="data">
+                                <p class="data-label">Термін:</p>
+                                <p class="data-expiry">180 днів</p>
+                                <img src="img/time.png" alt="Час" class="data-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="steps-section" id="payment">
+        <h2>Оплата та доставка</h2>
+        <h3>Як ми працюємо:</h3>
+        <div class="steps-container">
+            <div class="step-item">
+                <div class="step-icon">
+                    <span>1</span>
+                    <img src="img/card.png" alt="Замовлення на сайті">
+                </div>
+                <h4>Замовлення на сайті</h4>
+                <p>Оберіть товар та покладіть товар у кошик і введіть ваші контактні дані</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">
+                    <span>2</span>
+                    <img src="img/coll.png" alt="Дзвінок менеджера">
+                </div>
+                <h4>Дзвінок менеджера</h4>
+                <p>Наш менеджер зв'яжеться з Вами для уточнення умов доставки та оплати Вашого замовлення</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <span>3</span>
+                    <img src="img/puy.png" alt="Оплата та доставка">
+                </div>
+                <h4>Оплата та доставка</h4>
+                <p>Ви обираєте зручні варіанти оплати на картку або при отриманні</p>
+            </div>
+            <div class="step-item">
+                <div class="step-icon">
+                    <span>4</span>
+                    <img src="img/deliv.png" alt="Отримання замовлення">
+                </div>
+                <h4>Отримання замовлення</h4>
+                <p>Відправляємо Новою та Укрпоштою. Протягом зазначеного часу Ви отримуєте своє замовлення </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Розділ Контакти -->
+          <div class="footer-section contacts">
+            <h3>Контакти</h3>
+            <ul>
+              <li>Телефон: +38 (067) 543 69 71</li>
+              <li>Email: info@vyrobnykplyus.com</li>
+              <li>Адреса: Кривий ріг, вул. Черкасова 31</li>
+            </ul>
+          </div>
+      
+          <!-- Розділ Лого -->
+          <div class="footer-section logo">
+            <img src="img/LOGO низ.png" alt="Лого компанії" />
+          </div>
+      
+          <!-- Розділ Соціальні мережі -->
+          <div class="footer-section social">
+            <h3>Ми в соціальних мережах</h3>
+            <ul>
+              <li><a href="https://facebook.com">Facebook</a></li>
+              <li><a href="https://instagram.com">Instagram</a></li>
+              <li><a href="https://twitter.com">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+     <!-- Модальне вікно "Про нас" -->
+<div class="about-modal">
+    <div class="about-modal-content">
+        <span class="about-close">&times;</span>
+        <h2>Про нас</h2>
+        <img src="img/історія.jpg" alt="Про нас" class="about-image">
+        <p>Компанія ТОВ "Виробник Плюс" виникла на базі колишнього хлібзаводу у місті Кривий Ріг понад 15 років тому. Її історія почалася з скромних початків, але завдяки наполегливості та професіоналізму засновників, швидко стала визнаним лідером у виробництві кондитерських виробів. Використовуючи сучасні технології та інновації, компанія зберігає традиції якості та надійності.
+        Весь асортимент продукції ТМ "SOYUZ KONDITER", який виготовляється компанією ТОВ "Виробник Плюс", включаючи вівсяне печиво, кукурудзяне печиво, сухарі, торти та тістечка має українське походження. Більшість інгредієнтів, які використовуються у виробництві, також є здобутими на українських землях. Це відображає нашу глибоку зв'язаність з країною та підтримку вітчизняних виробників. Така практика не лише сприяє розвитку внутрішнього ринку та підтримці місцевих виробників, але й гарантує високу якість нашої продукції.
+        Лозунг компанії "Разом смачніше" відображає нашу філософію та цінності, спрямовані на співпрацю та партнерство. Він підкреслює наше переконання у тому, що спільна праця та об'єднання зусиль приносять кращі результати, ніж індивідуальні зусилля. Ми віримо, що колективна мудрість та спільна творчість дозволяють нам досягати вищих стандартів якості та надавати нашим клієнтам найсмачніші та найвишуканіші продукти.</p>
+    </div>
+</div>
+
+<!-- Модальне вікно "Оплата та доставка" -->
+<div class="payment-modal">
+    <div class="payment-modal-content">
+        <span class="payment-close">&times;</span>
+        <h2>Оплата</h2>
+        <p>Ми пропонуємо кілька зручних способів оплати вашого замовлення. Ви можете оплатити готівкою при отриманні товару або за допомогою картки. Оплата готівкою доступна у всіх пунктах НОВОЇ ПОШТИ та УКРПОШТИ після перевірки та отримання товару. Це забезпечує максимальний комфорт та безпеку під час покупки.</p>
+        <h2>Доставка, терміни та умови</h2>
+        <p>Ми здійснюємо доставку ваших замовлень через НОВУ ПОШТУ та УКРПОШТУ, гарантуючи швидкість та надійність доставки. Товари, що представлені на нашому сайті, є в наявності на складі та готові до відправки одразу після підтвердження замовлення менеджером або після надходження SMS-підтвердження.
+
+            <p>Термін доставки через НОВУ ПОШТУ – 1-3 дні</p>
+            <p>Термін доставки через УКРПОШТУ – 2-5 днів</p>
+            <p>Вартість доставки визначається відповідно до тарифів НОВОЇ ПОШТИ або УКРПОШТИ.</p>
+            <p>Якщо ви обрали доставку кур'єром, ви можете оплатити замовлення як готівкою, так і безготівковим способом.</p>
+            
+            <p>Ми постійно працюємо над вдосконаленням наших умов доставки, щоб забезпечити вам зручні та швидкі покупки. Усі деталі щодо доставки ви можете уточнити у наших операторів.</p>
+    </div>
+</div> 
+
+
+      
+
+
+<script src="script.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.details-btn');
+    
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const card = event.target.closest('.product-card');
+    
+                if (card) {
+                    // Основна інформація
+                    const mainImage = card.querySelector('img').src;
+                    const title = card.querySelector('p:nth-of-type(2)').textContent.trim();
+                    const price = card.querySelector('.price').textContent.trim();
+                    const article = card.querySelector('p').textContent.replace('Артикул: ', '').trim();
+    
+                    // Приховані дані
+                    const hiddenDetails = card.querySelector('.hidden-details');
+                    const additionalImages = Array.from(hiddenDetails.querySelectorAll('img'))
+                        .filter(img => !img.classList.contains('star-icon') && !img.classList.contains('data-icon'))
+                        .map(img => img.src);
+    
+                    const detailedDescription = hiddenDetails.querySelector('p').textContent.trim();
+    
+                    // Блок характеристик
+                    const nutritionDetailsHTML = hiddenDetails.querySelector('.nutrition-details').innerHTML;
+    
+                    // Формуємо об'єкт даних
+                    const productDetails = {
+                        mainImage,
+                        additionalImages,
+                        title,
+                        price,
+                        article,
+                        detailedDescription,
+                        nutritionDetailsHTML
+                    };
+    
+                    // Зберігаємо дані в sessionStorage
+                    sessionStorage.setItem('productDetails', JSON.stringify(productDetails));
+    
+                    // Переходимо на сторінку деталей
+                    window.location.href = 'product-detail.html';
+                }
+            });
+        });
+    });
+    
+
+
+    // Функція оновлення кількості товарів у кошику
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + parseInt(item.quantity), 0);
+    document.getElementById("cart-count").textContent = totalItems;
+}
+
+// Виклик функції при завантаженні сторінки
+updateCartCount();
+
+// Отримуємо дані з localStorage
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    </script>
+</body>
+</html>
