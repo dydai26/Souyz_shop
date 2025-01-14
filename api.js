@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cityInput = document.getElementById('city');
   const citySuggestions = document.getElementById('city-suggestions');
   const branchSelect = document.getElementById('branch-select');
-  const novaPoshtaApiKey = '5d4abafcb91ba762237904101bb78c5d';
+  const novaPoshtaApiKey = '8643b96da48f6845a36edd4376d965e0';
 
   // Пошук міст
   cityInput.addEventListener('input', () => {
