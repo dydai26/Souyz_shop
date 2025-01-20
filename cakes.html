@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торти і тістечка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="icon-container">
+                <img src="img/LOGO низ.png" alt="Іконка" class="header-icon">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#payment">Оплата і доставка</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="#cart">
+                    <i class="fas fa-shopping-cart"></i> <!-- Іконка кошика -->
+                </a>
+            </div>
+        </nav>
+    </header>
+   <!-- Бургер іконка -->
+<div class="burger-menu-icon" id="burger-icon" onclick="toggleMenu()">
+    &#9776; <!-- Символ бургер-іконки -->
+</div>
+
+<!-- Меню для бургера -->
+<nav id="burger-menu" class="burger-menu">
+    <div class="close-menu-icon" id="close-icon" onclick="toggleMenu()" style="display: none;">
+        &times; <!-- Символ хрестика -->
+    </div>
+    <ul class="menu-list">
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#catalog-title2">Каталог </a></li>
+        <li><a href="#how-to-order">Як замовити</a></li>
+        <li><a href="#how-to-measure">Оплата і доставка</a></li>
+        <li><a href="#review">Залишити відгук</a></li>
+        
+    </ul>
+</nav>
+
+    
+<!-- Карусель банерів -->
+<section class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('img/БанерP1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('img/Гол1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('img/Гол2.jpg');"></div>
+        </div>
+        <div class="carousel-controls">
+            <span class="carousel-btn" onclick="changeSlide(0)"></span>
+            <span class="carousel-btn" onclick="changeSlide(1)"></span>
+            <span class="carousel-btn" onclick="changeSlide(2)"></span>
+        </div>
+    </div>
+</section>
+<header class="page-header">
+    <div class="filter-container">
+        <h1>Каталог товарів</h1> <!-- Текст заголовку -->
+        <div class="filter-icon"></div> <!-- Іконка фільтру -->
+        <select id="filter" name="filter">
+            <option value="#catalog">Вівсяне печиво</option>
+            <option value="#catalog-corn">Кукурудзяне печиво</option>
+            <option value="#diatery">Дієтичне печиво</option>
+            <option value="#crackers">Сухарі</option>
+            <option value="#confectionery">Кондитерські вироби</option>
+            <option value="#cakes">Торти і тістечка</option>
+        </select>
+    </div>
+</header>
+<div class="catalog-tittle">
+    <h2 id="cakes" class="catalog-title">Торти і тістечка</h2>
+</div>
+<section class="product-catalog" id="cakes">
+    <div class="product-card">
+        <img src="img/Image00025.jpg" alt="Товар 1" class="product-image">
+        <p class="product-article">Артикул: 1</p>
+        <p class="product-description"><strong>Опис товару:</strong> Тістечко заварне "Смачненьке" 
+            Тістечко заварне 'Смачненьке' – ідеальне поєднання хрусткого заварного тіста та ніжного крему. Справжня насолода для любителів смачних десертів!
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00025.jpg"
+               data-image2="img/HImage00001.jpg"
+               data-article="1"
+               data-description="Тістечко заварне Смачненьке"
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00024.jpg" alt="Товар 2" class="product-image">
+        <p class="product-article">Артикул: 2</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечко Заварне LUXURY   
+            "Тістечко заварне 'LUXURY' – вишукане поєднання ніжного заварного тіста і розкішного крему. Подаруйте собі справжню розкіш смаку в кожному шматочку!"           
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00024.jpg"
+               data-image2="img/HImage00002.jpg"
+               data-article="2"
+               data-description="Тістечко Заварне LUXURY "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00021.jpg" alt="Товар 3" class="product-image">
+        <p class="product-article">Артикул: 3</p>
+        <p class="product-description"><strong>Опис товару:</strong>ЗАВАРНЕ "ПРЕМІУМ" 
+            "Тістечко заварне 'Преміум' – витончений десерт з хрусткого заварного тіста та розкішного крему. Насолоджуйтеся кожним шматочком справжньої якості та смаку!"              
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 3 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00021.jpg"
+               data-image2="img/HImage00003.jpg"
+               data-article="3"
+               data-description="ЗАВАРНЕ ПРЕМІУМ "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00023.jpg" alt="Товар 4" class="product-image">
+        <p class="product-article">Артикул: 4</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечко "Заварне зі згущеним увареним молоком" 
+            "Тістечко 'Заварне зі згущеним увареним молоком' – хрустке заварне тісто з густим і ароматним кремом із згущеного молока. Справжній десерт для тих, хто цінує насолоду в кожному шматочку!"        
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 7 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00023.jpg"
+               data-image2="img/HImage00004.jpg"
+               data-article="4"
+               data-description="Тістечко Заварне зі згущеним увареним молоком "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00027.jpg" alt="Товар 5" class="product-image">
+        <p class="product-article">Артикул: 5</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечко заварне "Іриска"
+            "Тістечко заварне 'Іриска' – насолода в кожному шматочку з хрустким заварним тістом та ніжним кремом з ірисками. Смакуйте справжню солодкість і теплоту!"               
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 7 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00027.jpg"
+               data-image2="img/HImage00005.jpg"
+               data-article="5"
+               data-description="Тістечко заварне Іриска "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00019.jpg" alt="Товар 6" class="product-image">
+        <p class="product-article">Артикул: 6</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечка заварні "МАНГО" 0.28 кг.
+            "Тістечка заварні 'МАНГО' – насичений смак екзотичного манго в ніжному заварному тісті. Свіжість та аромат тропіків у кожному шматочку!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 7 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00019.jpg"
+               data-image2="img/HImage00006.jpg"
+               data-article="6"
+               data-description="Тістечка заварні МАНГО 0.28 кг. "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00020.jpg" alt="Товар 7" class="product-image">
+        <p class="product-article">Артикул: 7</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечка заварні з сирковим кремом.
+            "Тістечка заварні з сирковим кремом – ніжне заварне тісто, наповнене кремом із сиру, що дарує неперевершену легкість і свіжість смаку. Ідеальний десерт для справжніх гурманів!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 7 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00020.jpg"
+               data-image2="HImage00007.jpg"
+               data-article="7"
+               data-description="Тістечка заварні з сирковим кремом. "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00026.jpg" alt="Товар 8" class="product-image">
+        <p class="product-article">Артикул: 8</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечко заварне "Любительське".
+            "Тістечко заварне 'Любительське' – класичне поєднання хрусткого заварного тіста та ніжного крему. Справжнє задоволення для всіх, хто цінує прості та смачні десерти!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00026.jpg"
+               data-image2="img/HImage00008.jpg"
+               data-article="8"
+               data-description="Тістечко заварне Любительське "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00022.jpg" alt="Товар 9" class="product-image">
+        <p class="product-article">Артикул: 9</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечка заварні "COCOLOVE" 0.32 кг.
+            "Тістечка заварні 'COCOLOVE' – розкішне поєднання ніжного заварного тіста з ароматним кокосовим кремом. Справжнє свято смаку в кожному шматочку!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 7 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00022.jpg"
+               data-image2="img/HImage00009.jpg"
+               data-article="9"
+               data-description="Тістечка заварні COCOLOVE 0.32 кг "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00029.jpg" alt="Товар 10" class="product-image">
+        <p class="product-article">Артикул: 10</p>
+        <p class="product-description"><strong>Опис товару:</strong>Тістечко заварне "Смаковита полуниця".         
+            "Тістечко заварне 'Смаковита полуниця' – ніжне заварне тісто, наповнене ароматним полуничним кремом. Справжній смак літа у кожному шматочку!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага корекс 0,42 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00029.jpg"
+               data-image2="img/HImage00010.jpg"
+               data-article="10"
+               data-description="Тістечка заварні МАНГО 0.28 кг. "
+               data-characteristics="Вага корекс 0,42 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00017.jpg" alt="Товар 11" class="product-image">
+        <p class="product-article">Артикул: 11</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Еклер 'Ніжність' – легкий і повітряний десерт з кремом, який тане в роті. Дозвольте собі насолодитися неперевершеним смаком ніжності!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага екран 1 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00017.jpg"
+               data-image2="img/HImage00011.jpg"
+               data-article="11"
+               data-description="Еклер 'Ніжність "
+               data-characteristics="Вага екран 1 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image00018.jpg" alt="Товар 12" class="product-image">
+        <p class="product-article">Артикул: 12</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Еклер зі згущеним молоком – ідеальне поєднання хрусткої оболонки і солодкого крему зі згущеного молока. Насолоджуйтеся кожним шматочком цього десерту!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага екран 1 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image00018.jpg"
+               data-image2="img/HImage00012.jpg"
+               data-article="12"
+               data-description="Еклер зі згущеним молоком "
+               data-characteristics="Вага екран 1 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image1.jpg" alt="Товар 13" class="product-image">
+        <p class="product-article">Артикул: 13</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'Медовий з вишнею' – вишукане поєднання ніжного медового бісквіту з соковитою вишнею. Ідеальний десерт для особливих моментів!"        
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image1.jpg"
+               data-image2="img/HImage3.jpg"
+               data-article="13"
+               data-description="Торт 'Медовий з вишнею'"
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image2.jpg" alt="Товар 14" class="product-image">
+        <p class="product-article">Артикул: 14</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'Медовий з чорною смородиною' — ніжні медові коржі в поєднанні з освіжаючою чорною смородиною для справжньої гастрономічної насолоди."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image2.jpg"
+               data-image2="img/HImage2.jpg"
+               data-article="14"
+               data-description="Торт 'Медовий з чорною смородиною' "
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image3.jpg" alt="Товар 15" class="product-image">
+        <p class="product-article">Артикул: 15</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Солодке натхнення: медовий торт з малиною. Ніжний медовий крем, покритий соковитою малиною – справжній десерт для гурманів!"      
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image3.jpg"
+               data-image2="img/HImage3.jpg"
+               data-article="15"
+               data-description="Торт Медовий з малиною "
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image4.jpg" alt="Товар 16" class="product-image">
+        <p class="product-article">Артикул: 16</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'Ryzhyk' – смачний витвір з золотистого бісквіту та ніжного крему. Насолоджуйтесь його багатим смаком та м’якою текстурою!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image4.jpg"
+               data-image2="img/HImage4.jpg"
+               data-article="16"
+               data-description="Торт 'Ryzhyk'"
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image5.jpg" alt="Товар 17" class="product-image">
+        <p class="product-article">Артикул: 17</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'SPARTAK з чорносливом' — класичний шоколадний торт із вишуканим смаком чорносливу."         
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image5.jpg"
+               data-image2="img/HImage5.jpg"
+               data-article="17"
+               data-description="Торт 'SPARTAK з чорносливом'"
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image6.jpg" alt="Товар 18" class="product-image">
+        <p class="product-article">Артикул: 18</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'Ryzhyk' з шоколадною начинкою – неперевершене поєднання золотистого бісквіту з багатим шоколадним кремом. Ідеальний десерт для справжніх ласунів!"
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image6.jpg"
+               data-image2="img/HImage6.jpg"
+               data-article="12"
+               data-description="Торт 'Ryzhyk' "
+               data-characteristics=" Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image7.jpg" alt="Товар 19" class="product-image">
+        <p class="product-article">Артикул: 19</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Бісквітний уголок 'Горішок' — ароматний десерт з ніжним бісквітом і насиченим смаком згущеного молока."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 15 днів. Вага екран 1,4 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image7.jpg"
+               data-image2="img/HImage7.jpg"
+               data-article="19"
+               data-description="Бісквітний уголок 'Горішок'"
+               data-characteristics="Вага екран 1,4 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image8.jpg" alt="Товар 20" class="product-image">
+        <p class="product-article">Артикул: 20</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            Бісквітний уголок зі згущеним увареним молоком — ніжний десерт з насиченим карамельним смаком."        
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 15 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image8.jpg"
+               data-image2="img/HImage8.jpg"
+               data-article="20"
+               data-description="Бісквітний уголок зі згущеним увареним молоком "
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image9.jpg" alt="Товар 21" class="product-image">
+        <p class="product-article">Артикул: 21</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт медовий домашній 'Іриска' — поєднання ніжного медового тіста і карамельного крему, що дарує справжній смак дитинства."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 10 днів. Вага корекс 0,45 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image9.jpg"
+               data-image2="img/HImage9.jpg"
+               data-article="21"
+               data-description="Торт медовий домашній 'Іриска' "
+               data-characteristics="Вага корекс 0,45 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image10.jpg" alt="Товар 22" class="product-image">
+        <p class="product-article">Артикул: 22</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Торт 'SMETANNIK' — нарізний десерт з ніжними сметанними прошарками, що тануть у роті."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 5 днів. Вага корекс 1,4 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image10.jpg"
+               data-image2="img/HImage10.jpg"
+               data-article="22"
+               data-description="Торт 'SMETANNIK' "
+               data-characteristics="Вага екран 1,4 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image11.jpg" alt="Товар 23" class="product-image">
+        <p class="product-article">Артикул: 23</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Тістечко 'Наполеон SHOCOLINA' — витончений десерт з насиченим шоколадним смаком і ніжними шарами тіста."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 8 днів. Вага корекс 0,4 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image11.jpg"
+               data-image2="img/HImage11.jpg"
+               data-article="23"
+               data-description="Тістечко 'Наполеон SHOCOLINA' "
+               data-characteristics="Вага корекс 0,4 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="img/Image12.jpg" alt="Товар 24" class="product-image">
+        <p class="product-article">Артикул: 24</p>
+        <p class="product-description"><strong>Опис товару:</strong>
+            "Класичний торт 'Наполеон' з ніжними шарами крему та хрусткого тіста, ідеальний для святкувань і особливих моментів."
+        </p>
+        <p class="product-characteristics">Характеристики: Термін придантості 8 днів. Вага корекс 0,4 кг</p>
+        <div class="product-price-btn-container">
+            <p class="product-price">Ціна: 50 UAH</p>
+            <a href="#" class="product-details-btn"
+               data-image="img/Image12.jpg"
+               data-image2="img/HImage12.jpg"
+               data-article="24"
+               data-description="Торт 'Наполеон' "
+               data-characteristics="Вага корекс 0,4 кг"
+               data-price="50">Детальніше</a>
+        </div>
+    </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Розділ Контакти -->
+          <div class="footer-section contacts">
+            <h3>Контакти</h3>
+            <ul>
+              <li>Телефон: +38 (098) 123-45-67</li>
+              <li>Email: info@example.com</li>
+              <li>Адреса: Київ, вул. Хрещатик, 22</li>
+            </ul>
+          </div>
+      
+          <!-- Розділ Лого -->
+          <div class="footer-section logo">
+            <img src="img/LOGO низ.png" alt="Лого компанії" />
+          </div>
+      
+          <!-- Розділ Соціальні мережі -->
+          <div class="footer-section social">
+            <h3>Ми в соціальних мережах</h3>
+            <ul>
+              <li><a href="https://facebook.com">Facebook</a></li>
+              <li><a href="https://instagram.com">Instagram</a></li>
+              <li><a href="https://twitter.com">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
+
+
+
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="carousel2">
+            <button class="carousel-arrow left-arrow">&#10094;</button>
+    <img src="" alt="Зображення товару" class="carousel-image" id="modal-image">
+    <img src="" alt="Зображення товару" class="carousel-image hidden" id="modal-image2">
+    <button class="carousel-arrow right-arrow">&#10095;</button>
+        </div>
+        <p id="modal-article"></p>
+        <p id="modal-description"></p>
+        <p id="modal-characteristics"></p>
+        <p id="modal-price"></p>
+        <input type="number" id="quantity" placeholder="Кількість">
+        <button id="order-btn">Замовити</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="mdl.js"></script>
+
+
+
+</body>
+</html>
