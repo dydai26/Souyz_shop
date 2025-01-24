@@ -49,12 +49,7 @@ foreach ($arr as $key => $value) {
 // Відправка повідомлення в Telegram
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}", "r");
 
-// Перевірка успішності відправки
-if ($sendToTelegram) {
-    header('Location: success.html'); // Перенаправлення на сторінку успішного замовлення
-} else {
-    echo "Помилка відправки замовлення!";
-}
+
 
 session_start();
 ?>
